@@ -29,9 +29,9 @@ function crystal(score) {
 	yourScore += score;
 	$("#yourScore").text("Your Number: " + yourScore);
 	if (yourScore < targetScore) 
-{
+	{
 
-	} else if (yourScore == targetScore){
+	} else if (yourScore == targetScore) {
 	alert("Yay, you won!");
 	wins ++;
 	$("#wins").text("Wins: " + wins);
@@ -46,7 +46,7 @@ function crystal(score) {
 }
 
 $(document).ready(function() {
-startGame();
+	startGame();
 
 	$("#crystal1").on("click", function() {
 	crystal(crystal1Score);
@@ -67,7 +67,6 @@ startGame();
 	crystal(crystal4Score);
 	console.log("Crystal 4 Value: " + crystal4Score)
 	});
-
 });
 
 
