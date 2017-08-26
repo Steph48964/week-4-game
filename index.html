@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Crystals Collector Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+      <header>
+          <h2>Crystals Collector Game</h2>
+
+    <hr>
+    
+    <div class="game">
+      <p id="matchNumber">Number to Match:</p>
+      <p id="yourScore">Your Number:</p>
+    </div>    
+
+    <hr>
+
+    <img src="assets/images/crystal1.jpg" class=crystal id=crystal1>
+    <img src="assets/images/crystal2.jpg" class=crystal id=crystal2>
+    <img src="assets/images/crystal3.jpg" class=crystal id=crystal3>
+    <img src="assets/images/crystal4.jpg" class=crystal id=crystal4>
+
+    <hr>
+
+    <p>To Play:</p>
+    <p>Each crystal has a specific point value assigned to it each new round.</p>
+    <p>Clicking on the crystals will add their point values to "Your Number".</p>
+    <p>You win if "Your Number" and the "Number to Match" are the same.</p>
+    <p>You lose if "Your Number" exceeds the "Number to Match".</p>
+    <p>Good luck!</p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js">document.querySelector("#game").innerHTML=html;</script>
+
+</body>
+
+</html>
