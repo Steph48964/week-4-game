@@ -4,6 +4,8 @@ var crystal1Score = 0;
 var crystal2Score = 0;
 var crystal3Score = 0;
 var crystal4Score = 0;
+var wins = 0;
+var losses = 0;
 
 function gameReset() {
 	crystal1Score = Math.floor((Math.random() * 11) + 1);
@@ -19,25 +21,29 @@ function startGame () {
 	gameReset();
 }   
 
-
 function crystal(score) {
 	yourScore += score;
 	$("#yourScore").text("Your Number: " + yourScore);
-	if (yourScore < targetScore) {
+	if (yourScore < targetScore) 
+
+	{
 		
 		} else if (yourScore == targetScore){
 		alert("Yay, you won!");
-		startGame();
+			wins ++;
+			$("#wins").text("Wins: " + winCount);
 		location.reload();
+		startGame();
 		}
 
 		else if (yourScore > targetScore) {
 		alert("Sorry, you lost.");
-		startGame();
+			lossCount ++;
+			$("#losses").text("Losses: " + lossCount);
 		location.reload();
+		startGame();
 		}
 }
-
 
 $(document).ready(function() {
     startGame();
