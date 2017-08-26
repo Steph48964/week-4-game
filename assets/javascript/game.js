@@ -28,11 +28,13 @@ function crystal(score) {
 		} else if (yourScore == targetScore){
 		alert("Yay, you won!");
 		startGame();
+		location.reload();
 		}
 
 		else if (yourScore > targetScore) {
 		alert("Sorry, you lost.");
 		startGame();
+		location.reload();
 		}
 }
 
