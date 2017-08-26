@@ -18,55 +18,56 @@ function startGame () {
 	targetScore = Math.floor((Math.random() * 101) +19);
 	$("#matchNumber").text("Number to Match: " + targetScore);
 	console.log("Number To Match: " + targetScore);
+
+	yourScore = 0;
+	$("#yourScore").text("Your Number: " + yourScore);
+	
 	gameReset();
-}   
+} 
 
 function crystal(score) {
 	yourScore += score;
 	$("#yourScore").text("Your Number: " + yourScore);
 	if (yourScore < targetScore) 
+{
 
-	{
-		
-		} else if (yourScore == targetScore){
-		alert("Yay, you won!");
-			wins ++;
-			$("#wins").text("Wins: " + wins);
-		location.reload();
-		startGame();
-		}
+	} else if (yourScore == targetScore){
+	alert("Yay, you won!");
+	wins ++;
+	$("#wins").text("Wins: " + wins);
+	startGame();
 
-		else if (yourScore > targetScore) {
-		alert("Sorry, you lost.");
-			losses ++;
-			$("#losses").text("Losses: " + losses);
-		location.reload();
-		startGame();
-		}
+	} else if (yourScore > targetScore) {
+	alert("Sorry, you lost.");
+	losses ++;
+	$("#losses").text("Losses: " + losses);
+	startGame();
+	}
 }
 
 $(document).ready(function() {
-    startGame();
+startGame();
 
-		$("#crystal1").on("click", function() {
-		crystal(crystal1Score);
-		console.log("Crystal 1 Value: " + crystal1Score)
-		});
+	$("#crystal1").on("click", function() {
+	crystal(crystal1Score);
+	console.log("Crystal 1 Value: " + crystal1Score)
+	});
 
-		$("#crystal2").on("click", function() {
-		crystal(crystal2Score);
-		console.log("Crystal 2 Value: " + crystal2Score)
-		});
+	$("#crystal2").on("click", function() {
+	crystal(crystal2Score);
+	console.log("Crystal 2 Value: " + crystal2Score)
+	});
 
-		$("#crystal3").on("click", function() {
-		crystal(crystal3Score);
-		console.log("Crystal 3 Value: " + crystal3Score)
-		});
+	$("#crystal3").on("click", function() {
+	crystal(crystal3Score);
+	console.log("Crystal 3 Value: " + crystal3Score)
+	});
 
-		$("#crystal4").on("click", function() {
-		crystal(crystal4Score);
-		console.log("Crystal 4 Value: " + crystal4Score)
-		});
+	$("#crystal4").on("click", function() {
+	crystal(crystal4Score);
+	console.log("Crystal 4 Value: " + crystal4Score)
+	});
 
 });
+
 
