@@ -31,15 +31,15 @@ function crystal(score) {
 		} else if (yourScore == targetScore){
 		alert("Yay, you won!");
 			wins ++;
-			$("#wins").text("Wins: " + winCount);
+			$("#wins").text("Wins: " + wins);
 		location.reload();
 		startGame();
 		}
 
 		else if (yourScore > targetScore) {
 		alert("Sorry, you lost.");
-			lossCount ++;
-			$("#losses").text("Losses: " + lossCount);
+			losses ++;
+			$("#losses").text("Losses: " + losses);
 		location.reload();
 		startGame();
 		}
