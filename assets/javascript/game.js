@@ -28,8 +28,7 @@ function startGame () {
 function crystal(score) {
 	yourScore += score;
 	$("#yourScore").text("Your Number: " + yourScore);
-	if (yourScore < targetScore) 
-	{
+	if (yourScore < targetScore) {
 
 	} else if (yourScore == targetScore) {
 	alert("Yay, you won!");
